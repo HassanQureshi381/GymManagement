@@ -1,0 +1,96 @@
+﻿@model IEnumerable<GymManagementSystem.Models.Attendance>
+@{
+    ViewData["Title"] = "Attendance";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="fw-bold mb-0">
+        <i class="bi bi-calendar-check"></i> Today's Attendance
+        <span class="badge bg-primary ms-2">@DateTime.Today.ToString("dd MMM yyyy")</span>
+    </h4>
+    <a asp-action="CheckIn" class="btn btn-success">
+        <i class="bi bi-box-arrow-in-right"></i> Record Check-in
+    </a>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-0">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Member</th>
+                    <th>Check In</th>
+                    <th>Check Out</th>
+                    <th>Duration</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var att in Model)
+                {
+                    <tr>
+                        <td>@att.Id</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="rounded-circle bg-success text-white d-flex
+                                    align-items-center justify-content-center fw-bold"
+                                     style="width:32px;height:32px;font-size:.8rem;">
+                                    @att.Member?.FullName.Substring(0, 1).ToUpper()
+                                </div>
+                                @att.Member?.FullName
+                            </div>
+                        </td>
+                        <td>@att.CheckIn.ToString("hh:mm tt")</td>
+                        <td>@(att.CheckOut.HasValue? att.CheckOut.Value.ToString("hh:mm tt") : "—")</td>
+                        <td>
+                            @if (att.Duration.HasValue)
+                            {
+                                @($"{(int)att.Duration.Value.TotalHours}h {att.Duration.Value.Minutes}m")
+                            }
+                            else
+                            {
+                                <span>—</span>
+                            }
+                        </td>
+                        <td>
+                            @if (!att.CheckOut.HasValue)
+                            {
+                                <span class="badge bg-success">In Gym</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-secondary">Left</span>
+                            }
+                        </td>
+                        <td>
+                            @if (!att.CheckOut.HasValue)
+                            {
+                                <form asp-action="CheckOut" method="post" class="d-inline">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="id" value="@att.Id" />
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">
+                                        <i class="bi bi-box-arrow-right"></i> Check Out
+                                    </button>
+                                </form>
+                            }
+                            else
+                            {
+                                <span class="text-muted small">Completed</span>
+                            }
+                        </td>
+                    </tr>
+                }
+                @if (!Model.Any())
+                {
+                    <tr>
+                        <td colspan="7" class="text-center text-muted py-4">
+                            <i class="bi bi-inbox fs-3"></i><br />No attendance records for today.
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

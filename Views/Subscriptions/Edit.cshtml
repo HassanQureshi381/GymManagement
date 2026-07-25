@@ -1,0 +1,166 @@
+﻿@model GymManagementSystem.Models.Subscription
+@{
+    ViewData["Title"] = "Edit Subscription";
+}
+
+<div class="d-flex align-items-center gap-2 mb-4">
+    <a asp-action="Index" class="btn btn-outline-secondary btn-sm">
+        <i class="bi bi-arrow-left"></i>
+    </a>
+    <h4 class="fw-bold mb-0"><i class="bi bi-credit-card"></i> Edit Subscription</h4>
+</div>
+
+<div class="card border-0 shadow-sm" style="max-width:600px;">
+    <div class="card-body p-4">
+        <form asp-action="Edit" method="post">
+            @Html.AntiForgeryToken()
+            <input asp-for="Id" type="hidden" />
+            <input asp-for="CreatedAt" type="hidden" />
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+            <div class="row g-3">
+
+                <!-- Member -->
+                <div class="col-12">
+                    <label asp-for="MemberId" class="form-label fw-semibold">Member</label>
+                    <select asp-for="MemberId" class="form-select"
+                            asp-items="ViewBag.Members" required>
+                        <option value="">— Select Member —</option>
+                    </select>
+                    <span asp-validation-for="MemberId" class="text-danger small"></span>
+                </div>
+
+                <!-- Plan -->
+                <div class="col-md-6">
+                    <label asp-for="Plan" class="form-label fw-semibold">Plan</label>
+                    <select asp-for="Plan" id="Plan" class="form-select"
+                            asp-items="Html.GetEnumSelectList<GymManagementSystem.Models.SubscriptionPlan>()">
+                    </select>
+                </div>
+
+                <!-- Amount -->
+                <div class="col-md-6">
+                    <label asp-for="Amount" class="form-label fw-semibold">Amount (Rs.)</label>
+                    <div class="input-group">
+                        <span class="input-group-text">Rs.</span>
+                        <input asp-for="Amount" id="Amount" type="number"
+                               class="form-control" min="0" step="100" />
+                    </div>
+                    <span asp-validation-for="Amount" class="text-danger small"></span>
+                </div>
+
+                <!-- Start Date -->
+                <div class="col-md-6">
+                    <label asp-for="StartDate" class="form-label fw-semibold">Start Date</label>
+                    <input asp-for="StartDate" id="StartDate" type="date" class="form-control" />
+                    <span asp-validation-for="StartDate" class="text-danger small"></span>
+                </div>
+
+                <!-- End Date -->
+                <div class="col-md-6">
+                    <label asp-for="EndDate" class="form-label fw-semibold">End Date</label>
+                    <input asp-for="EndDate" id="EndDate" type="date" class="form-control" />
+                    <span asp-validation-for="EndDate" class="text-danger small"></span>
+                    <div class="form-text text-info small">
+                        <i class="bi bi-info-circle"></i> Auto-calculated when plan changes
+                    </div>
+                </div>
+
+                <!-- Status Info -->
+                <div class="col-12">
+                    <div class="alert py-2 mb-0
+                        @(Model.IsActive ? "alert-success" : "alert-secondary")">
+                        <i class="bi bi-@(Model.IsActive ? "check-circle" : "x-circle")"></i>
+                        Subscription is currently
+                        <strong>@(Model.IsActive ? "Active" : "Expired")</strong>
+                        @if (!Model.IsActive && Model.EndDate < DateTime.Today)
+                        {
+                            <span class="ms-1 text-danger">
+                                (expired @((DateTime.Today - Model.EndDate).Days) days ago)
+                            </span>
+                        }
+                        else if (Model.IsActive)
+                        {
+                            <span class="ms-1">
+                                (@((Model.EndDate - DateTime.Today).Days) days remaining)
+                            </span>
+                        }
+                    </div>
+                </div>
+
+                <!-- Payment -->
+                <div class="col-12">
+                    <div class="card bg-light border-0 p-3">
+                        <div class="form-check form-switch">
+                            <input asp-for="IsPaid" class="form-check-input" type="checkbox" />
+                            <label asp-for="IsPaid" class="form-check-label fw-semibold">
+                                Payment Received
+                            </label>
+                        </div>
+                        @if (!Model.IsPaid)
+                        {
+                            <div class="text-danger small mt-1">
+                                <i class="bi bi-exclamation-triangle"></i>
+                                Payment not yet received
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="text-success small mt-1">
+                                <i class="bi bi-check-circle"></i>
+                                Payment received
+                            </div>
+                        }
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="d-flex gap-2 mt-4">
+                <button type="submit" class="btn btn-warning px-4">
+                    <i class="bi bi-check-lg"></i> Update Subscription
+                </button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Plan default prices
+        const planPrices = {
+            0: { label: 'Monthly (1 month)',      price: 2500,  months: 1  },
+            1: { label: 'Quarterly (3 months)',   price: 6500,  months: 3  },
+            2: { label: 'Semi-Annual (6 months)', price: 11000, months: 6  },
+            3: { label: 'Annual (12 months)',     price: 18000, months: 12 }
+        };
+
+        function addMonths(dateStr, months) {
+            const d = new Date(dateStr);
+            d.setMonth(d.getMonth() + months);
+            return d.toISOString().split('T')[0];
+        }
+
+        // When plan changes — update end date only (keep amount as is for edit)
+        document.getElementById('Plan').addEventListener('change', function () {
+            const info     = planPrices[this.value];
+            const startVal = document.getElementById('StartDate').value;
+            if (!info) return;
+
+            // Update end date
+            if (startVal) {
+                document.getElementById('EndDate').value = addMonths(startVal, info.months);
+            }
+        });
+
+        // When start date changes — recalculate end date
+        document.getElementById('StartDate').addEventListener('change', function () {
+            const planVal = document.getElementById('Plan').value;
+            const info    = planPrices[planVal];
+            if (info && this.value) {
+                document.getElementById('EndDate').value = addMonths(this.value, info.months);
+            }
+        });
+    </script>
+}

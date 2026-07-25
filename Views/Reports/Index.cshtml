@@ -1,0 +1,148 @@
+﻿@{
+    ViewData["Title"] = "Reports";
+    var stats = Model as dynamic;
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="fw-bold mb-0">
+        <i class="bi bi-bar-chart-fill text-warning"></i> Reports & Analytics
+    </h4>
+    <span class="badge bg-danger px-3 py-2">
+        <i class="bi bi-shield-lock"></i> Admin Only
+    </span>
+</div>
+
+<!-- Stats Cards -->
+<div class="row g-4 mb-4">
+    <div class="col-sm-6 col-xl-3">
+        <div class="card border-0 shadow-sm border-start border-primary border-4">
+            <div class="card-body">
+                <div class="text-muted small">Total Members</div>
+                <div class="fw-bold fs-3 text-primary">@stats.TotalMembers</div>
+                <div class="text-success small">
+                    <i class="bi bi-check-circle"></i> @stats.ActiveMembers active
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="card border-0 shadow-sm border-start border-success border-4">
+            <div class="card-body">
+                <div class="text-muted small">Total Trainers</div>
+                <div class="fw-bold fs-3 text-success">@stats.TotalTrainers</div>
+                <div class="text-muted small"><i class="bi bi-person-badge"></i> On staff</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="card border-0 shadow-sm border-start border-warning border-4">
+            <div class="card-body">
+                <div class="text-muted small">Today's Attendance</div>
+                <div class="fw-bold fs-3 text-warning">@stats.TodayAttendance</div>
+                <div class="text-muted small">
+                    <i class="bi bi-calendar"></i> @DateTime.Today.ToString("dd MMM")
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="card border-0 shadow-sm border-start border-danger border-4">
+            <div class="card-body">
+                <div class="text-muted small">Monthly Revenue</div>
+                <div class="fw-bold fs-3 text-danger">
+                    Rs. @((stats.MonthlyRevenue as decimal?) ?? 0m)
+                </div>
+                <div class="text-muted small">
+                    <i class="bi bi-calendar-month"></i> @DateTime.Today.ToString("MMMM yyyy")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- Expiring Subscriptions -->
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white fw-semibold text-danger">
+                <i class="bi bi-exclamation-triangle"></i> Expiring This Week
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-sm mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Member</th>
+                            <th>Plan</th>
+                            <th>Expires</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var sub in stats.ExpiringThisWeek)
+                        {
+                            <tr>
+                                <td>@sub.Member?.FullName</td>
+                                <td><span class="badge bg-warning text-dark">@sub.Plan</span></td>
+                                <td class="text-danger fw-semibold">
+                                    @((sub.EndDate as DateTime?) != null
+                                        ? ((DateTime)sub.EndDate).ToString("dd MMM")
+                                        : "—")
+                                </td>
+                            </tr>
+                        }
+                        @if (((IEnumerable<dynamic>)stats.ExpiringThisWeek).Count() == 0)
+                        {
+                            <tr>
+                                <td colspan="3" class="text-center text-muted py-3">
+                                    ✅ No expiring subscriptions this week!
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Attendance -->
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white fw-semibold">
+                <i class="bi bi-clock-history text-primary"></i> Recent Attendance
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-sm mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Member</th>
+                            <th>Check In</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var att in stats.RecentAttendance)
+                        {
+                            <tr>
+                                <td>@att.Member?.FullName</td>
+                                <td class="small text-muted">
+                                    @((att.CheckIn as DateTime?) != null
+                                        ? ((DateTime)att.CheckIn).ToString("dd MMM hh:mm tt")
+                                        : "—")
+                                </td>
+                                <td>
+                                    @if (att.CheckOut == null)
+                                    {
+                                        <span class="badge bg-success">In Gym</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-secondary">Left</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

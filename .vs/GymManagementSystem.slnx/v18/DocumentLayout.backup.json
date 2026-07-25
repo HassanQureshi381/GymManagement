@@ -1,0 +1,665 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\attendance\\checkin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\attendance\\checkin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\trainers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\trainers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\viewmodels\\userviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:viewmodels\\userviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\trainers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\trainers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\controllers\\trainers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:controllers\\trainers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\viewmodels\\changepasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:viewmodels\\changepasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\controllers\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:controllers\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\subscriptions\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\subscriptions\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\reports\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\reports\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\trainers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\trainers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\trainers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\trainers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\subscriptions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\subscriptions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\attendance\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\attendance\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\subscriptions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\subscriptions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\members\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\members\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\members\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\members\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\members\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\members\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\views\\members\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:views\\members\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\controllers\\memberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:controllers\\memberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\models\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:models\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\models\\trainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:models\\trainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|c:\\users\\hassan\\source\\repos\\gymmanagement\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F05D94C-A009-411B-E729-259D55E019F1}|GymManagementSystem.csproj|solutionrelative:models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Trainers\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Trainers\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Trainers\\Index.cshtml",
+              "RelativeToolTip": "Views\\Trainers\\Index.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAQwG4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-18T10:22:22.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Checkin.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Attendance\\Checkin.cshtml",
+              "RelativeDocumentMoniker": "Views\\Attendance\\Checkin.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Attendance\\Checkin.cshtml",
+              "RelativeToolTip": "Views\\Attendance\\Checkin.cshtml",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAswPsBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-18T10:24:14.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Trainers\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Trainers\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Trainers\\Details.cshtml",
+              "RelativeToolTip": "Views\\Trainers\\Details.cshtml",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAswMYAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-25T06:54:28.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AttendanceController.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Controllers\\AttendanceController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AttendanceController.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Controllers\\AttendanceController.cs",
+              "RelativeToolTip": "Controllers\\AttendanceController.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAIwFYAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T08:02:07.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\ViewModels\\UserViewModels.cs",
+              "RelativeDocumentMoniker": "ViewModels\\UserViewModels.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\ViewModels\\UserViewModels.cs",
+              "RelativeToolTip": "ViewModels\\UserViewModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T11:18:12.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-18T10:00:30.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-18T07:51:10.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ReportsController.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Controllers\\ReportsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReportsController.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Controllers\\ReportsController.cs",
+              "RelativeToolTip": "Controllers\\ReportsController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwC8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T08:02:38.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAqwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T11:16:49.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ChangePasswordViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\ViewModels\\ChangePasswordViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ChangePasswordViewModel.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\ViewModels\\ChangePasswordViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ChangePasswordViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T12:01:57.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Trainers.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Controllers\\Trainers.cs",
+              "RelativeDocumentMoniker": "Controllers\\Trainers.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Controllers\\Trainers.cs",
+              "RelativeToolTip": "Controllers\\Trainers.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAQwF4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T10:32:09.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Users\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Users\\Index.cshtml",
+              "RelativeToolTip": "Views\\Users\\Index.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAQwEcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-24T11:27:46.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Users\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Users\\Create.cshtml",
+              "RelativeToolTip": "Views\\Users\\Create.cshtml",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwDYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-24T11:28:21.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-18T09:58:39.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAQwHIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-18T08:04:31.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Subscription.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Controllers\\Subscription.cs",
+              "RelativeDocumentMoniker": "Controllers\\Subscription.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Controllers\\Subscription.cs",
+              "RelativeToolTip": "Controllers\\Subscription.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAowJAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T10:32:43.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Subscriptions\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Subscriptions\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Subscriptions\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Subscriptions\\Edit.cshtml",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAQwKUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-24T07:42:26.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Reports\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reports\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Reports\\Index.cshtml",
+              "RelativeToolTip": "Views\\Reports\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADQAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-18T10:26:13.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAgwEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T07:50:20.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Models\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\DashboardViewModel.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Models\\DashboardViewModel.cs",
+              "RelativeToolTip": "Models\\DashboardViewModel.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T07:03:15.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Trainers\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Trainers\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Trainers\\Create.cshtml",
+              "RelativeToolTip": "Views\\Trainers\\Create.cshtml",
+              "ViewState": "AgIAADQAAAAAAAAAAAAowEMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-18T10:22:47.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T08:00:31.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AccessDenied.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Account\\AccessDenied.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\AccessDenied.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Account\\AccessDenied.cshtml",
+              "RelativeToolTip": "Views\\Account\\AccessDenied.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-18T08:06:16.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwD4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T10:00:56.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Data\\SeedData.cs",
+              "RelativeDocumentMoniker": "Data\\SeedData.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Data\\SeedData.cs",
+              "RelativeToolTip": "Data\\SeedData.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T07:50:44.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Subscriptions\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Subscriptions\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Subscriptions\\Create.cshtml",
+              "RelativeToolTip": "Views\\Subscriptions\\Create.cshtml",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAowJoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-18T10:25:35.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Attendance\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Attendance\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Attendance\\Index.cshtml",
+              "RelativeToolTip": "Views\\Attendance\\Index.cshtml",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAowF8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-18T10:23:36.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Trainers\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Trainers\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Trainers\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Trainers\\Edit.cshtml",
+              "ViewState": "AgIAADIAAAAAAAAAAAAowEEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-18T10:23:05.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Subscriptions\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Subscriptions\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Subscriptions\\Index.cshtml",
+              "RelativeToolTip": "Views\\Subscriptions\\Index.cshtml",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAowNcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-18T10:25:11.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Members\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Members\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Members\\Details.cshtml",
+              "RelativeToolTip": "Views\\Members\\Details.cshtml",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAowKwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-18T10:17:40.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Members\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Members\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Members\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Members\\Edit.cshtml",
+              "ViewState": "AgIAADEAAAAAAAAAAAAowEAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-18T10:17:11.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Members\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Members\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Members\\Create.cshtml",
+              "RelativeToolTip": "Views\\Members\\Create.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowEIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-18T10:16:45.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Members\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Members\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Views\\Members\\Index.cshtml",
+              "RelativeToolTip": "Views\\Members\\Index.cshtml",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAowHQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-18T10:15:55.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "MembersController.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Controllers\\MembersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MembersController.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Controllers\\MembersController.cs",
+              "RelativeToolTip": "Controllers\\MembersController.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAowFUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T08:01:24.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T08:04:10.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowBgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T07:49:12.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Subscription.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Models\\Subscription.cs",
+              "RelativeDocumentMoniker": "Models\\Subscription.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Models\\Subscription.cs",
+              "RelativeToolTip": "Models\\Subscription.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowBgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T07:46:26.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Trainer.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Models\\Trainer.cs",
+              "RelativeDocumentMoniker": "Models\\Trainer.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Models\\Trainer.cs",
+              "RelativeToolTip": "Models\\Trainer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T07:45:53.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Member.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Models\\Member.cs",
+              "RelativeDocumentMoniker": "Models\\Member.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Models\\Member.cs",
+              "RelativeToolTip": "Models\\Member.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T07:45:07.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\Hassan\\source\\repos\\GymManagement\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T07:44:33.66Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

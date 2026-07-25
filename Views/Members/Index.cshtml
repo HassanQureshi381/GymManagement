@@ -1,0 +1,117 @@
+﻿@model IEnumerable<GymManagementSystem.Models.Member>
+@{
+    ViewData["Title"] = "Members";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="fw-bold mb-0"><i class="bi bi-people"></i> Members</h4>
+    <a asp-action="Create" class="btn btn-primary">
+        <i class="bi bi-person-plus"></i> Add Member
+    </a>
+</div>
+
+<!-- Search Bar -->
+<div class="card border-0 shadow-sm mb-4">
+    <div class="card-body py-2">
+        <input type="text" id="searchInput" class="form-control"
+               placeholder="🔍 Search members by name, email or phone..." />
+    </div>
+</div>
+
+<!-- Table -->
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-0">
+        <table class="table table-hover align-middle mb-0" id="membersTable">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Trainer</th>
+                    <th>Status</th>
+                    <th>Join Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var member in Model)
+                {
+                    <tr>
+                        <td>@member.Id</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="rounded-circle bg-primary text-white d-flex align-items-center
+                                    justify-content-center fw-bold"
+                                     style="width:36px;height:36px;font-size:.85rem;">
+                                    @member.FullName.Substring(0, 1).ToUpper()
+                                </div>
+                                <span class="fw-semibold">@member.FullName</span>
+                            </div>
+                        </td>
+                        <td>@member.Email</td>
+                        <td>@member.Phone</td>
+                        <td>
+                            @if (member.Trainer != null)
+                            {
+                                <span class="badge bg-info text-dark">@member.Trainer.FullName</span>
+                            }
+                            else
+                            {
+                                <span class="text-muted">—</span>
+                            }
+                        </td>
+                        <td>
+                            @if (member.IsActive)
+                            {
+                                <span class="badge bg-success">Active</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-secondary">Inactive</span>
+                            }
+                        </td>
+                        <td>@member.JoinDate.ToString("dd MMM yyyy")</td>
+                        <td>
+                            <div class="d-flex gap-1">
+                                <a asp-action="Details" asp-route-id="@member.Id"
+                                       class="btn btn-sm btn-outline-info" title="Details">
+                                    <i class="bi bi-eye"></i>
+                                </a>
+                                <a asp-action="Edit" asp-route-id="@member.Id"
+                                       class="btn btn-sm btn-outline-warning" title="Edit">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <a asp-action="Delete" asp-route-id="@member.Id"
+                                           class="btn btn-sm btn-outline-danger"
+                                           onclick="return confirm('Delete this member?')" title="Delete">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
+                                }
+                            </div>
+                        </td>
+                    </tr>
+                }
+                @if (!Model.Any())
+                {
+                    <tr>
+                        <td colspan="8" class="text-center text-muted py-4">
+                            <i class="bi bi-inbox fs-3"></i><br />No members found.
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    document.getElementById('searchInput').addEventListener('keyup', function () {
+        const filter = this.value.toLowerCase();
+        document.querySelectorAll('#membersTable tbody tr').forEach(row => {
+            row.style.display = row.textContent.toLowerCase().includes(filter) ? '' : 'none';
+        });
+    });
+</script>

@@ -1,0 +1,508 @@
+﻿@{
+    ViewData["Title"] = "Check In";
+}
+
+<div class="d-flex align-items-center gap-2 mb-4">
+    <a asp-action="Index" class="btn btn-outline-secondary btn-sm">
+        <i class="bi bi-arrow-left"></i>
+    </a>
+    <h4 class="fw-bold mb-0">
+        <i class="bi bi-box-arrow-in-right"></i> Record Check-in
+    </h4>
+</div>
+
+<div class="row g-4">
+
+    <!-- ── LEFT: Check-in Form ──────────────────────── -->
+    <div class="col-md-5">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white fw-semibold border-0 pt-3 pb-0">
+                <i class="bi bi-person-check text-success"></i> Select Member
+            </div>
+            <div class="card-body p-4">
+                <form asp-action="CheckIn" method="post" id="checkInForm">
+                    @Html.AntiForgeryToken()
+
+                    <!-- Hidden memberId -->
+                    <input type="hidden" name="memberId" id="selectedMemberId" />
+
+                    <!-- ── Search Box ──────────────── -->
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">
+                            Search Member
+                            <span class="text-danger">*</span>
+                        </label>
+
+                        <div class="input-group" id="searchInputGroup">
+                            <span class="input-group-text bg-white">
+                                <i class="bi bi-search text-muted"></i>
+                            </span>
+                            <input type="text"
+                                   id="memberSearch"
+                                   class="form-control border-start-0"
+                                   placeholder="Type name, email or phone..."
+                                   autocomplete="off" />
+                        </div>
+
+                        <!-- Dropdown Results -->
+                        <div id="searchResults"
+                             class="border rounded-3 shadow mt-1 bg-white"
+                             style="display:none; max-height:250px;
+                            overflow-y:auto; z-index:999;
+                            position:relative;">
+                        </div>
+
+                        <!-- Selected Member Card -->
+                        <div id="selectedMemberCard"
+                             style="display:none;" class="mt-2">
+                            <div class="border rounded-3 p-3
+                                bg-success bg-opacity-10
+                                border-success d-flex align-items-center
+                                justify-content-between">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="rounded-circle bg-success text-white
+                                        d-flex align-items-center
+                                        justify-content-center fw-bold"
+                                         style="width:44px;height:44px;font-size:1.1rem;"
+                                         id="selectedAvatar">
+                                    </div>
+                                    <div>
+                                        <div class="fw-bold"
+                                             id="selectedName"></div>
+                                        <div class="text-muted small"
+                                             id="selectedEmail"></div>
+                                        <div class="text-muted small"
+                                             id="selectedPhone"></div>
+                                    </div>
+                                </div>
+                                <button type="button"
+                                        id="clearSelection"
+                                        class="btn btn-sm btn-outline-danger">
+                                    <i class="bi bi-x-lg"></i> Change
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="memberError"
+                             class="text-danger small mt-1"
+                             style="display:none;">
+                            <i class="bi bi-exclamation-circle"></i>
+                            Please select a member first.
+                        </div>
+                    </div>
+
+                    <!-- ── Notes ──────────────────── -->
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">
+                            Notes
+                            <span class="text-muted fw-normal small">
+                                (Optional)
+                            </span>
+                        </label>
+                        <textarea name="notes"
+                              class="form-control"
+                              rows="2"
+                                  placeholder="e.g. Late arrival, guest pass...">
+                        </textarea>
+                    </div>
+
+                    <!-- ── Live Clock ──────────────── -->
+                    <div class="alert alert-info py-2 mb-4
+                        d-flex align-items-center
+                        justify-content-between">
+                        <span class="small">
+                            <i class="bi bi-clock"></i> Check-in time:
+                        </span>
+                        <strong id="liveClock"></strong>
+                    </div>
+
+                    <!-- ── Submit ──────────────────── -->
+                    <button type="submit"
+                            class="btn btn-success w-100 btn-lg"
+                            id="submitBtn"
+                            disabled>
+                        <i class="bi bi-box-arrow-in-right"></i>
+                        Record Check-in
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── RIGHT: Members List ───────────────────────── -->
+    <div class="col-md-7">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white border-0 pt-3 pb-0
+                d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">
+                    <i class="bi bi-people text-primary"></i>
+                    All Active Members
+                </span>
+                <div class="d-flex align-items-center gap-2">
+                    <span class="badge bg-primary" id="listCount"></span>
+                    <!-- List search -->
+                    <input type="text"
+                           id="listSearch"
+                           class="form-control form-control-sm"
+                           style="width:180px;"
+                           placeholder="🔍 Filter list..." />
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <div style="max-height:520px; overflow-y:auto;">
+                    <table class="table table-hover align-middle mb-0"
+                           id="memberListTable">
+                        <thead class="table-dark sticky-top">
+                            <tr>
+                                <th>Member</th>
+                                <th>Phone</th>
+                                <th>Today</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="memberListBody">
+                            <!-- Filled by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card-footer bg-white border-0 text-muted small py-2 px-3">
+                <i class="bi bi-info-circle"></i>
+                Click <strong>Quick Check-in</strong> to instantly select
+                a member from the list.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script>
+        // ── Members data ──────────────────────────────────
+        const members = @Html.Raw(ViewBag.MembersJson ?? "[]");
+
+        // ── Today's check-ins from server ─────────────────
+        const todayCheckedInIds = @Html.Raw(ViewBag.TodayCheckedInIds ?? "[]");
+
+        // ── DOM Elements ──────────────────────────────────
+        const searchInput      = document.getElementById('memberSearch');
+        const searchInputGroup = document.getElementById('searchInputGroup');
+        const searchResults    = document.getElementById('searchResults');
+        const selectedCard     = document.getElementById('selectedMemberCard');
+        const selectedMemberId = document.getElementById('selectedMemberId');
+        const selectedName     = document.getElementById('selectedName');
+        const selectedEmail    = document.getElementById('selectedEmail');
+        const selectedPhone    = document.getElementById('selectedPhone');
+        const selectedAvatar   = document.getElementById('selectedAvatar');
+        const clearBtn         = document.getElementById('clearSelection');
+        const submitBtn        = document.getElementById('submitBtn');
+        const memberError      = document.getElementById('memberError');
+        const memberListBody   = document.getElementById('memberListBody');
+        const listSearch       = document.getElementById('listSearch');
+        const listCount        = document.getElementById('listCount');
+
+        const avatarColors = [
+            '#0d6efd','#198754','#dc3545','#fd7e14',
+            '#6610f2','#0dcaf0','#20c997','#ffc107'
+        ];
+
+        // ── Live Clock ────────────────────────────────────
+        function updateClock() {
+            document.getElementById('liveClock').textContent =
+                new Date().toLocaleTimeString('en-US', {
+                    hour: '2-digit', minute: '2-digit',
+                    second: '2-digit', hour12: true
+                });
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+
+        // ══════════════════════════════════════════════════
+        // MEMBER LIST — render full table
+        // ══════════════════════════════════════════════════
+        function renderMemberList(filter = '') {
+            memberListBody.innerHTML = '';
+            const query    = filter.toLowerCase();
+            const filtered = members.filter(m =>
+                m.fullName.toLowerCase().includes(query) ||
+                m.email.toLowerCase().includes(query)    ||
+                m.phone.toLowerCase().includes(query)
+            );
+
+            listCount.textContent = `${filtered.length} members`;
+
+            if (filtered.length === 0) {
+                memberListBody.innerHTML = `
+                    <tr>
+                        <td colspan="4" class="text-center text-muted py-4">
+                            <i class="bi bi-inbox fs-3 d-block mb-2"></i>
+                            No members found.
+                        </td>
+                    </tr>`;
+                return;
+            }
+
+            filtered.forEach((member, index) => {
+                const color      = avatarColors[index % avatarColors.length];
+                const checkedIn  = todayCheckedInIds.includes(member.id);
+
+                const tr = document.createElement('tr');
+                tr.setAttribute('data-id', member.id);
+
+                tr.innerHTML = `
+                    <td>
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="rounded-circle text-white d-flex
+                                        align-items-center justify-content-center
+                                        fw-bold flex-shrink-0"
+                                 style="width:36px;height:36px;
+                                        font-size:.85rem;background:${color};">
+                                ${escapeHtml(member.fullName.charAt(0).toUpperCase())}
+                            </div>
+                            <div>
+                                <div class="fw-semibold small">
+                                    ${escapeHtml(member.fullName)}
+                                </div>
+                                <div class="text-muted" style="font-size:.72rem;">
+                                    ${escapeHtml(member.email)}
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="small text-muted">
+                        <i class="bi bi-telephone"></i>
+                        ${escapeHtml(member.phone)}
+                    </td>
+                    <td>
+                        ${checkedIn
+                            ? '<span class="badge bg-success">' +
+                              '<i class="bi bi-check2"></i> Checked In</span>'
+                            : '<span class="badge bg-light text-muted ' +
+                              'border">Not In</span>'
+                        }
+                    </td>
+                    <td>
+                        ${checkedIn
+                            ? '<button class="btn btn-sm btn-outline-secondary" ' +
+                              'disabled title="Already checked in">' +
+                              '<i class="bi bi-check-circle"></i> Done</button>'
+                            : `<button class="btn btn-sm btn-success quick-checkin"
+                                   data-id="${member.id}"
+                                   data-name="${escapeHtml(member.fullName)}"
+                                   data-email="${escapeHtml(member.email)}"
+                                   data-phone="${escapeHtml(member.phone)}"
+                                   data-color="${color}"
+                                   title="Quick select">
+                                   <i class="bi bi-lightning-fill"></i> Select
+                               </button>`
+                        }
+                    </td>`;
+
+                memberListBody.appendChild(tr);
+            });
+
+            // Attach quick check-in button events
+            document.querySelectorAll('.quick-checkin').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    selectMember({
+                        id:       this.dataset.id,
+                        fullName: this.dataset.name,
+                        email:    this.dataset.email,
+                        phone:    this.dataset.phone
+                    }, this.dataset.color);
+
+                    // Scroll to top / form
+                    document.getElementById('checkInForm')
+                        .scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        }
+
+        // Initial render
+        renderMemberList();
+
+        // List filter input
+        listSearch.addEventListener('input', function () {
+            renderMemberList(this.value);
+        });
+
+        // ══════════════════════════════════════════════════
+        // LIVE SEARCH — dropdown
+        // ══════════════════════════════════════════════════
+        searchInput.addEventListener('input', function () {
+            const query = this.value.trim().toLowerCase();
+            if (query.length === 0) {
+                hideDropdown();
+                return;
+            }
+
+            const filtered = members.filter(m =>
+                m.fullName.toLowerCase().includes(query) ||
+                m.email.toLowerCase().includes(query)    ||
+                m.phone.toLowerCase().includes(query)
+            );
+
+            renderDropdown(filtered, query);
+        });
+
+        function renderDropdown(filtered, query) {
+            searchResults.innerHTML = '';
+
+            if (filtered.length === 0) {
+                searchResults.innerHTML = `
+                    <div class="text-center py-4 text-muted">
+                        <i class="bi bi-person-x d-block fs-3 mb-2"></i>
+                        <div class="small">No member found for
+                            <strong>"${escapeHtml(query)}"</strong>
+                        </div>
+                    </div>`;
+                searchResults.style.display = 'block';
+                return;
+            }
+
+            filtered.forEach((member, index) => {
+                const color  = avatarColors[index % avatarColors.length];
+                const regex  = new RegExp(`(${escapeRegex(query)})`, 'gi');
+                const highlight = escapeHtml(member.fullName).replace(
+                    regex,
+                    '<mark class="p-0 rounded" ' +
+                    'style="background:#fff3cd;">$1</mark>'
+                );
+
+                const item = document.createElement('div');
+                item.className = 'px-3 py-2 d-flex align-items-center gap-3';
+                item.style.cssText =
+                    'cursor:pointer; border-bottom:1px solid #f0f0f0;' +
+                    'transition:background .15s;';
+                item.setAttribute('tabindex', '0');
+
+                item.innerHTML = `
+                    <div class="rounded-circle text-white d-flex
+                                 align-items-center justify-content-center
+                                 fw-bold flex-shrink-0"
+                         style="width:38px;height:38px;
+                                font-size:.9rem;background:${color};">
+                        ${escapeHtml(member.fullName.charAt(0).toUpperCase())}
+                    </div>
+                    <div class="flex-grow-1">
+                        <div class="fw-semibold small">${highlight}</div>
+                        <div class="text-muted" style="font-size:.72rem;">
+                            <i class="bi bi-envelope"></i>
+                            ${escapeHtml(member.email)}
+                            &nbsp;|&nbsp;
+                            <i class="bi bi-telephone"></i>
+                            ${escapeHtml(member.phone)}
+                        </div>
+                    </div>
+                    <i class="bi bi-chevron-right text-muted small"></i>`;
+
+                item.addEventListener('mouseenter', () =>
+                    item.style.background = '#f8f9fa');
+                item.addEventListener('mouseleave', () =>
+                    item.style.background = 'white');
+                item.addEventListener('click', () =>
+                    selectMember(member, color));
+                item.addEventListener('keydown', e => {
+                    if (e.key === 'Enter') selectMember(member, color);
+                    if (e.key === 'Escape') hideDropdown();
+                });
+
+                searchResults.appendChild(item);
+            });
+
+            searchResults.style.display = 'block';
+        }
+
+        // ── Arrow key navigation in dropdown ─────────────
+        searchInput.addEventListener('keydown', function (e) {
+            const items = searchResults.querySelectorAll('div[tabindex]');
+            if (e.key === 'ArrowDown' && items.length > 0) {
+                e.preventDefault();
+                items[0].focus();
+            }
+            if (e.key === 'Escape') hideDropdown();
+        });
+
+        // ══════════════════════════════════════════════════
+        // SELECT MEMBER
+        // ══════════════════════════════════════════════════
+        function selectMember(member, color) {
+            selectedMemberId.value          = member.id;
+            selectedAvatar.textContent      =
+                member.fullName.charAt(0).toUpperCase();
+            selectedAvatar.style.background = color || '#198754';
+            selectedName.textContent        = member.fullName;
+            selectedEmail.innerHTML =
+                `<i class="bi bi-envelope"></i> ${escapeHtml(member.email)}`;
+            selectedPhone.innerHTML =
+                `<i class="bi bi-telephone"></i> ${escapeHtml(member.phone)}`;
+
+            selectedCard.style.display     = 'block';
+            searchInputGroup.style.display = 'none';
+            searchResults.style.display    = 'none';
+            memberError.style.display      = 'none';
+            submitBtn.disabled             = false;
+            searchInput.value              = '';
+
+            // Highlight the row in the list
+            document.querySelectorAll('#memberListBody tr').forEach(row => {
+                row.style.background = '';
+            });
+            const row = document.querySelector(
+                `#memberListBody tr[data-id="${member.id}"]`);
+            if (row) {
+                row.style.background = '#d1f5d3';
+                row.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        // ── Clear Selection ───────────────────────────────
+        clearBtn.addEventListener('click', () => {
+            selectedMemberId.value         = '';
+            selectedCard.style.display     = 'none';
+            searchInputGroup.style.display = 'flex';
+            submitBtn.disabled             = true;
+            searchResults.style.display    = 'none';
+            searchInput.value              = '';
+            searchInput.focus();
+
+            // Remove list highlight
+            document.querySelectorAll('#memberListBody tr').forEach(row => {
+                row.style.background = '';
+            });
+        });
+
+        // ── Close dropdown when clicking outside ──────────
+        document.addEventListener('click', function (e) {
+            if (!searchInput.contains(e.target) &&
+                !searchResults.contains(e.target)) {
+                hideDropdown();
+            }
+        });
+
+        function hideDropdown() {
+            searchResults.style.display = 'none';
+        }
+
+        // ── Form validation ───────────────────────────────
+        document.getElementById('checkInForm')
+            .addEventListener('submit', function (e) {
+            if (!selectedMemberId.value) {
+                e.preventDefault();
+                memberError.style.display = 'block';
+                searchInput.focus();
+            }
+        });
+
+        // ── Helpers ───────────────────────────────────────
+        function escapeHtml(str) {
+            return String(str ?? '')
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+        function escapeRegex(str) {
+            return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+    </script>
+}
